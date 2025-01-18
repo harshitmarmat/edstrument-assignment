@@ -1,0 +1,19 @@
+{
+    "vendors": [
+      { "id": 1, "name": "Vendor A - ABC Supplies", "address": "550 Main St., Lynn, MA" },
+      { "id": 2, "name": "Vendor B - XYZ Enterprises", "address": "45 Park Ave., Boston, MA" },
+      { "id": 3, "name": "Vendor C - Global Services", "address": "123 Elm St., Cambridge, MA" },
+      { "id": 4, "name": "Vendor D - Tech Solutions", "address": "200 Beacon St., Somerville, MA" }
+    ],
+    "purchaseOrderNumbers": ["PO-001", "PO-002", "PO-003", "PO-004", "PO-005"],
+    "paymentTerms": ["Net 15", "Net 30", "Net 45", "Due on Receipt", "Custom Terms"],
+    "departments": ["Finance", "Human Resources", "Operations", "IT", "Marketing"],
+    "accounts": [
+      { "id": 101, "name": "Office Supplies" },
+      { "id": 102, "name": "Travel Expenses" },
+      { "id": 103, "name": "Consulting Fees" },
+      { "id": 104, "name": "Maintenance Costs" }
+    ],
+    "locations": ["Boston", "New York", "San Francisco", "Los Angeles", "Chicago"]
+  }
+  
