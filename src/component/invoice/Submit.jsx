@@ -22,14 +22,14 @@ const Submit = () => {
     <div className="lg:fixed static lg:bottom-0 flex w-full lg:w-1/2 px-6 h-[11vh] bg-ed_white text-center gap-4 py-6 border-t !border-ed_grey text-ed_black">
       <div
         onClick={() => saveHandler()}
-        className="w-1/2 cursor-pointer border  border-ed_black rounded-lg py-4"
+        className="w-1/2 cursor-pointer border flex items-center justify-center border-ed_black rounded-lg py-4"
       >
         Save as Draft
       </div>
       <button
         name="submitBtn"
         type="submit"
-        className="w-1/2 text-ed_white cursor-pointer bg-ed_primary rounded-xl py-4"
+        className="w-1/2 text-ed_white cursor-pointer flex items-center justify-center bg-ed_primary rounded-xl py-4"
       >
         Submit & New
       </button>
