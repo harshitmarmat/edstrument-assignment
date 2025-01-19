@@ -9,7 +9,7 @@ const Navbar = () => {
   const invoicePage = location.pathname.includes("create-invoice");
 
   return (
-    <div className="lg:fixed pt-[2vh] px-6 w-full h-[6vh] top-0 bg-ed_white z-10 flex items-center justify-between">
+    <div className="lg:fixed pt-[2vh] px-6 w-full lg:h-[6vh] h-[10vh] top-0 bg-ed_white z-10 flex items-center justify-between">
       {invoicePage ? (
         <InvoiceNavbar />
       ) : (
