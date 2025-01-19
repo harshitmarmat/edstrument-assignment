@@ -87,35 +87,37 @@ const ExpenseDetail = () => {
                     placeholder="Enter Description"
                   />
                 </div>
+                <div className="w-full gap-4 col-span-2 flex justify-end">
+                  {index !== 0 && (
+                    <button
+                      type="button"
+                      onClick={(index) => {
+                        console.log(index);
+                        remove(index);
+                      }}
+                      className="text-ed-subh1 cursor-pointer w-fit p-4 my-4 text-ed_red border rounded-lg"
+                    >
+                      - Remove Expense
+                    </button>
+                  )}
+                  <button
+                    type="button"
+                    onClick={() => {
+                      push({
+                        lineAmount: "",
+                        department: "",
+                        account: "",
+                        location: "",
+                        description: "",
+                      });
+                    }}
+                    className="text-ed-subh1 cursor-pointer w-fit p-4 my-4 text-ed_black border rounded-lg"
+                  >
+                    + Add Expense Coding
+                  </button>
+                </div>
               </div>
             ))}
-            <div className="w-full gap-4 col-span-2 flex justify-end">
-              <button
-                type="button"
-                onClick={(index) => {
-                  console.log(index);
-                  remove(index);
-                }}
-                className="text-ed-subh1 cursor-pointer w-fit p-4 my-4 text-ed_red border rounded-lg"
-              >
-                - Remove Expense
-              </button>
-              <button
-                type="button"
-                onClick={() => {
-                  push({
-                    lineAmount: "",
-                    department: "",
-                    account: "",
-                    location: "",
-                    description: "",
-                  });
-                }}
-                className="text-ed-subh1 cursor-pointer w-fit p-4 my-4 text-ed_black border rounded-lg"
-              >
-                + Add Expense Coding
-              </button>
-            </div>
           </>
         )}
       />
