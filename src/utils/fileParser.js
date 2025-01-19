@@ -5,12 +5,11 @@ const handleFileUpload = (file) => {
     if (!file) return reject("No file provided");
 
     Papa.parse(file, {
-      header: true, // Ensures the first row is treated as headers
-      skipEmptyLines: true, // Skips empty lines
+      header: true,
+      skipEmptyLines: true,
       complete: (results) => {
-        const parsedData = results.data; // Array of objects
+        const parsedData = results.data;
 
-        // Example: Map parsed data to form fields
         const updatedValues = {
           vender: parsedData[0]?.vender || "",
           poNumber: parsedData[0]?.poNumber || "",
@@ -31,12 +30,11 @@ const handleFileUpload = (file) => {
           comments: parsedData[0]?.comments || "",
         };
 
-        // Resolve the promise with the updatedValues
         resolve(updatedValues);
       },
       error: (err) => {
         console.error("Error parsing CSV:", err);
-        reject(err); // Reject the promise in case of error
+        reject(err);
       },
     });
   });

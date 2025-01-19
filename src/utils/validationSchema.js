@@ -26,9 +26,9 @@ const validationSchema = Yup.object({
         description: Yup.string().required('Description is required'),
       })
     )
-    .min(1, 'At least one expense detail is required') // Optional: If you need at least one entry in expenseDetails
+    .min(1, 'At least one expense detail is required') 
     .required('Expense details are required'),
-  comments: Yup.string().optional(), // Assuming comments are optional
+  comments: Yup.string().optional(), 
 });
 
 
