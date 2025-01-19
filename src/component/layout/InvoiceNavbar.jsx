@@ -24,7 +24,7 @@ const InvoiceNavbar = () => {
   return (
     <>
       <div className="flex items-center gap-4 mb-4">
-        <img className="cursor-pointer" onClick={()=> navigate('/home')} src={backArrow} alt="back-arrow" />
+        <img className="cursor-pointer" onClick={()=> navigate('/')} src={backArrow} alt="back-arrow" />
         <p className="text-ed-h2">Create New Invoice</p>
       </div>
       <div className="hidden lg:flex w-[50%] items-center gap-8 pl-8">

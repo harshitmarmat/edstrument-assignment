@@ -34,12 +34,12 @@ const Invoice = () => {
     []
   );
 
-  const handleSubmit = (values, { setSubmitting, resetForm }) => {
+  const handleSubmit = () => {
     dispatch(showToast({
       message: 'Invoice uploaded successfully!',
         type: 'success',
     }))
-    navigate('/home');
+    navigate('/');
   };
 
   return (

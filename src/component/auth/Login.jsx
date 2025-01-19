@@ -19,11 +19,11 @@ const Login = () => {
 
   const handleSubmit = (values, { setSubmitting }) => {
     setError(false);
-    if (values.email !== validEmail && values.password !== validPassword) {
-      setError(true);
-    } else {
+    if (values.email === validEmail && values.password === validPassword) {
       localStorage.setItem(LOCAL_LOGIN_KEY, JSON.stringify(values));
       navigate("/create-invoice");
+    } else {
+      setError(true);
     }
     setSubmitting(false);
   };
@@ -95,7 +95,7 @@ const Login = () => {
                   The credentials are shared in the email or the README file.
                   Kindly go to the following link for more information.
                   <a
-                    href="https://link-to-your-readme-or-support-page.com"
+                    href="https://github.com/harshitmarmat/edstrument-assignment/blob/main/README.md"
                     className="text-ed_primary underline ml-1"
                     target="_blank"
                     rel="noopener noreferrer"

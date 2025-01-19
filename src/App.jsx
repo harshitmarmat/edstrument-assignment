@@ -1,24 +1,26 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import React, { Suspense, lazy } from "react";
+import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import "./index.css";
-import Login from "./component/auth/Login";
-import Invoice from "./component/invoice/Invoice";
-import Body from "./component/layout/Body";
-import Home from "./component/home/Home";
+
+const Login = lazy(() => import("./component/auth/Login"));
+const Invoice = lazy(() => import("./component/invoice/Invoice"));
+const Body = lazy(() => import("./component/layout/Body"));
+const Home = lazy(() => import("./component/home/Home"));
 
 function App() {
-  
   return (
-    <>
-      <BrowserRouter>
+    <BrowserRouter>
+      <Suspense fallback={<div>Loading...</div>}>
         <Routes>
           <Route path="/login" element={<Login />} />
           <Route path="/" element={<Body />}>
             <Route path="/create-invoice" element={<Invoice />} />
-            <Route path="/home" element={<Home />} />
+            <Route path="/" element={<Home />} />
+            <Route path="*" element={<Navigate to="/" replace />} />
           </Route>
         </Routes>
-      </BrowserRouter>
-    </>
+      </Suspense>
+    </BrowserRouter>
   );
 }
 
